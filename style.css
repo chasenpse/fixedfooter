@@ -16,36 +16,145 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /*end reset*/
 
+header {
+    width:100%;
+    padding:0 0 0 20px;
+    height:50px;
+    position:fixed;
+    top:0;
+    background:rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+header nav ul li {
+    display:inline-block;
+    font-family:arial, helvetica, sans-serif;
+    font-size:1em;
+    color:#eee;
+    font-weight:bold;
+    margin-right:25px;
+    line-height:50px;
+}
+
+header ul li:last-of-type {
+    margin-right: 0px;
+}
+
+section article {
+    display:block;
+    text-align: center;
+    background: linear-gradient(#A00, #800);
+    color:#eee;
+    border-bottom:3px dashed #eee;
+}
+
+section h2 {
+    font-size:2em;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+section p {
+    font-family:arial, helvetica, sans-serif;
+    font-size:0.8em;
+}
+
+footer {
+    width:100%;
+    z-index:-1;
+    position:fixed;
+    left:0;
+    bottom:0;
+    display:block;
+    padding:20px;
+    color:#eee;
+    text-align: center;
+    background: linear-gradient(#000, #333);
+    font-family:arial, helvetica, sans-serif;
+}
+
+/* breakpoints */
+@media screen and (min-width: 1280px) {
+    section article {
+        height:300px;
+        padding:100px 50px;
+    }
+    section article:last-of-type {
+        margin-bottom:420px;
+    }
+    footer {
+        height:380px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    section article {
+        height:300px;
+        padding:100px 50px;
+    }
+    section article:last-of-type {
+        margin-bottom:420px;
+    }
+    footer {
+        height:380px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    section article {
+        height:200px;
+        padding:80px 50px;
+    }
+    section article:last-of-type {
+        margin-bottom:420px;
+    }
+    footer {
+        height:380px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section article {
+        height:300px;
+        padding:80px 50px;
+    }
+    section article:last-of-type {
+        margin-bottom:420px;
+    }
+    footer {
+        height:380px;
+    }
+}
